@@ -8,7 +8,7 @@ public class inventory : MonoBehaviour
     {
         if(other.CompareTag("Spawnable")) 
         {
-            Collect(other.GetComponent<Collectible>());  
+            Collect(other.GetComponent<Collectible>());
         }
     }
 
@@ -17,8 +17,29 @@ public class inventory : MonoBehaviour
         if(collectible.Collect())
         {
             if(collectible is batteryCollectible)
+            {
                 Debug.Log("battery collected");
-            
+            }
+            else if(collectible is flipFlopCollectible)
+            {
+                Debug.Log("flip flop collected");
+            }
+            else if(collectible is cartonCollectible)
+            {
+                Debug.Log("carton collected");
+            }
+            else if(collectible is ringCollectible)
+            {
+                Debug.Log("ring collected");
+            }
+             else if(collectible is canCollectible)
+            {
+                Debug.Log("can collected");
+            }
+            else
+            {
+                Debug.Log("Nothing Collected");
+            }
         }
         
     }
