@@ -440,6 +440,8 @@ GameObject:
   - component: {fileID: 863193285}
   - component: {fileID: 863193284}
   - component: {fileID: 863193283}
+  - component: {fileID: 863193287}
+  - component: {fileID: 863193288}
   m_Layer: 0
   m_Name: Sammytopviewdown
   m_TagString: Untagged
@@ -549,6 +551,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &863193287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863193282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66bdbc6ab8e95c64ea7ca10728b92696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &863193288
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863193282}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.186641, y: 1.0132419}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 18, y: 18}
+    newSize: {x: 18, y: 18}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.401623, y: 2.3861797}
+  m_EdgeRadius: 0
 --- !u!1 &1061211912
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,11 +1027,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberToSpawn: 50
   spawnPool:
-  - {fileID: 6308967716490140323, guid: 1074cc133ca703a4aa1b0fb2de6144b0, type: 3}
-  - {fileID: 5610005392347271136, guid: e88651cddb820e646834001802a7a077, type: 3}
-  - {fileID: 7304142547579710878, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
-  - {fileID: 1060201476831506884, guid: 2dac8a37e074a9340b133973c4129610, type: 3}
-  - {fileID: 4908250154614685742, guid: 645059bee7c8ea14d983a1a6c986149e, type: 3}
+  - {fileID: 5333456170943387833, guid: f666a8bbd6c065a45aa911eb6189f2b5, type: 3}
+  - {fileID: 294932022183870096, guid: ff718ae9ac3133d4ca2db97fccd5b8b9, type: 3}
+  - {fileID: 7029607750224922462, guid: 18cd759cbffa96c4c814d5bbc098b6b9, type: 3}
+  - {fileID: 4582172827664897530, guid: c1ec350e8e1dc90438b775a4a8940d5e, type: 3}
+  - {fileID: 1084980661677323875, guid: 6b30c9d20659c2440add4be3cfd5d6bf, type: 3}
   quad: {fileID: 1477906422}
 --- !u!4 &1516568492
 Transform:
