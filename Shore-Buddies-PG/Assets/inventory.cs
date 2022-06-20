@@ -5,8 +5,10 @@ using TMPro;
 
 public class inventory : MonoBehaviour
 {
-    public TMP_Text scoreText;
-    int score = 0; 
+    public TMP_Text personalScoreText;
+    public TMP_Text groupScoreText;
+    int personalScore = 0, groupScore = 0;
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,7 +19,8 @@ public class inventory : MonoBehaviour
     }
 
     public void UpdateTextBox() {
-        scoreText.text = score.ToString();
+        personalScoreText.text = personalScore.ToString();
+        groupScoreText.text = $"Score: {groupScore.ToString()}";
     }
 
     private void Collect (Collectible collectible)
@@ -27,27 +30,32 @@ public class inventory : MonoBehaviour
             if(collectible is batteryCollectible)
             {
                 Debug.Log("battery collected");
-                score += 20;
+                personalScore += 20;
+                groupScore += 20;
             }
             else if(collectible is flipFlopCollectible)
             {
                 Debug.Log("flip flop collected");
-                score += 5;
+                personalScore += 5;
+                groupScore += 5;
             }
             else if(collectible is cartonCollectible)
             {
                 Debug.Log("carton collected");
-                score += 10;
+                personalScore += 10;
+                groupScore += 10;
             }
             else if(collectible is ringCollectible)
             {
                 Debug.Log("ring collected");
-                score += 10;
+                personalScore += 10;
+                groupScore += 10;
             }
             else if(collectible is canCollectible)
             {
                 Debug.Log("can collected");
-                score += 5;
+                personalScore += 5;
+                groupScore += 5;
             }
             else
             {
