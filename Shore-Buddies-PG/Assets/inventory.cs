@@ -17,6 +17,8 @@ public class inventory : MonoBehaviour
     public TMP_Text flipFlopCounter;
     public TMP_Text ringCounter;
     public int inventorySize = 5;
+    public int personalScore = 0;
+    public int groupScore = 0;
     private int batteries = 0;
     private int cans = 0;
     private int cartons = 0;
@@ -27,8 +29,12 @@ public class inventory : MonoBehaviour
     private int cartonsTotal = 0;
     private int flipFlopsTotal = 0;
     private int ringsTotal = 0;
-    
-    public int personalScore = 0, groupScore = 0;
+    public static int personalTotalScore = 0;
+    public static int batteriesTotalScore = 0;
+    public static int cansTotalScore = 0;
+    public static int cartonsTotalScore = 0;
+    public static int flipFlopsTotalScore = 0;
+    public static int ringsTotalScore = 0;
 
     void Start()
     {
@@ -57,6 +63,7 @@ public class inventory : MonoBehaviour
         if(other.CompareTag("Deposit"))
         {
             groupScore = groupScore + batteries + cans + cartons + flipFlops + rings;
+            personalTotalScore = groupScore;
             personalScore = 0;
             batteries = 0;
             cans = 0;
@@ -81,7 +88,9 @@ public class inventory : MonoBehaviour
                 Debug.Log("battery collected");
                 batteries++;
                 batteriesTotal++;
+                batteriesTotalScore++;
                 personalScore += 1;
+                personalTotalScore++;
                 //groupScore += 1;
             }
             else if(collectible is flipFlopCollectible)
@@ -89,7 +98,9 @@ public class inventory : MonoBehaviour
                 Debug.Log("flip flop collected");
                 flipFlops++;
                 flipFlopsTotal++;
+                flipFlopsTotalScore++;
                 personalScore += 1;
+                personalTotalScore++;
                 //groupScore += 1;
             }
             else if(collectible is cartonCollectible)
@@ -97,7 +108,9 @@ public class inventory : MonoBehaviour
                 Debug.Log("carton collected");
                 cartons++;
                 cartonsTotal++;
+                cartonsTotalScore++;
                 personalScore += 1;
+                personalTotalScore++;
                 //groupScore += 1;
             }
             else if(collectible is ringCollectible)
@@ -105,7 +118,9 @@ public class inventory : MonoBehaviour
                 Debug.Log("ring collected");
                 rings++;
                 ringsTotal++;
+                ringsTotalScore++;
                 personalScore += 1;
+                personalTotalScore++;
                 //groupScore += 1;
             }
             else if(collectible is canCollectible)
@@ -113,7 +128,9 @@ public class inventory : MonoBehaviour
                 Debug.Log("can collected");
                 cans++;
                 cansTotal++;
+                cansTotalScore++;
                 personalScore += 1;
+                personalTotalScore++;
                 //groupScore += 1;
             }
             else
