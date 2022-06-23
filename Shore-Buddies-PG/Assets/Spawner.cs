@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     public int numberToSpawn;
     public List<GameObject> spawnPool;
     public GameObject quad;
+    Rigidbody2D rb;
 
     void Start()
     {
@@ -32,7 +33,7 @@ public class Spawner : MonoBehaviour
             screenY = Random.Range(c.bounds.min.y, c.bounds.max.y);
             pos = new Vector2(screenX, screenY);
 
-            Instantiate(toSpawn, pos, toSpawn.transform.rotation);
+            Instantiate(toSpawn, pos, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));
 
         }
     }
