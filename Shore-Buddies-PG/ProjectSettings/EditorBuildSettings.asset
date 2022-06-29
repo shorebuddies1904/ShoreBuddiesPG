@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/EndScene.unity
     guid: ef34723dda2927f4ab42895d8a91bb34
+  - enabled: 1
+    path: Assets/ConnectToServer.unity
+    guid: ccf6064e2c1a6404bb0529151f8e2e19
+  - enabled: 1
+    path: Assets/Lobby.unity
+    guid: 27ca92d5f77ba495d87f0311cb31631e
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 3bbe5e09c4c2cc94ab21e76a9a3bc848, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: f56759fc89cc453439d77cc39684df9d, type: 2}
