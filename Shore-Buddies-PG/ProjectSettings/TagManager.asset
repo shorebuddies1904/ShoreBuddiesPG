@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spawnable
   - Deposit
+  - BeachBounds
   layers:
   - Default
   - TransparentFX
