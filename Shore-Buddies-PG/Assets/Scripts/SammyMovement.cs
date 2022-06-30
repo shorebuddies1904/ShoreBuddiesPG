@@ -19,7 +19,7 @@ public class SammyMovement : MonoBehaviour
     {
         Move();
     }
-// Character movement
+
     void ProcessInputs()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
