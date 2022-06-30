@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro; 
+using Photon.Pun;
 
 public class inventory : MonoBehaviour
 {
@@ -35,16 +36,28 @@ public class inventory : MonoBehaviour
     public static int cartonsTotalScore = 0;
     public static int flipFlopsTotalScore = 0;
     public static int ringsTotalScore = 0;
+    public static int groupTotalScore = 0;
 
-    void Start()
+    PhotonView view;
+    
+    [PunRPC]
+    private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        personalScoreText = GameObject.Find("HeldItems").GetComponent<TextMeshProUGUI>();
+        groupScoreText = GameObject.Find("TotalScore").GetComponent<TextMeshProUGUI>();
+        batteryCounter = GameObject.Find("BatteryCounter").GetComponent<TextMeshProUGUI>();
+        cartonCounter = GameObject.Find("CartonCounter").GetComponent<TextMeshProUGUI>();
+        canCounter = GameObject.Find("CanCounter").GetComponent<TextMeshProUGUI>();
+        flipFlopCounter = GameObject.Find("FFCounter").GetComponent<TextMeshProUGUI>();
+        ringCounter = GameObject.Find("RingCounter").GetComponent<TextMeshProUGUI>();
         rend = GetComponent<SpriteRenderer>();
+        view = GetComponent<PhotonView>();
         UpdateGUI();
         UpdateTextBox();
     }
-
-    private void OnTriggerStay2D(Collider2D other)
+    [PunRPC]
+    public void OnTriggerStay2D(Collider2D other)
     {
         if(other.CompareTag("Spawnable") && (personalScore < inventorySize)) 
         {
@@ -53,7 +66,7 @@ public class inventory : MonoBehaviour
 
         if(personalScore == inventorySize)
         {
-            rend.color = Color.green;
+            rend.color = Color.gray;
         }
         else
         {
@@ -72,13 +85,15 @@ public class inventory : MonoBehaviour
             rings = 0;
         }
     }
-
+    [PunRPC]
     public void UpdateTextBox() 
     {
-        personalScoreText.text = $"{personalScore.ToString()} / " + inventorySize;
-        groupScoreText.text = groupScore.ToString();
+        //personalScoreText.text = $"{personalScore.ToString()} / " + inventorySize;
+        //groupScoreText.text = groupScore.ToString();
+
     }
 
+    [PunRPC]
     private void Collect (Collectible collectible)
     {
         if(collectible.Collect())
@@ -142,13 +157,17 @@ public class inventory : MonoBehaviour
         UpdateGUI();
         UpdateTextBox();
     }
+    [PunRPC]
     private void UpdateGUI()
     {
-        batteryCounter.text = batteriesTotal.ToString();
-        canCounter.text = cansTotal.ToString();
-        cartonCounter.text = cartonsTotal.ToString();
-        flipFlopCounter.text = flipFlopsTotal.ToString();
-        ringCounter.text = ringsTotal.ToString();
+        batteryCounter.text = batteriesTotalScore.ToString();
+        canCounter.text = cansTotalScore.ToString();
+        cartonCounter.text = cartonsTotalScore.ToString();
+        flipFlopCounter.text = flipFlopsTotalScore.ToString();
+        ringCounter.text = ringsTotalScore.ToString();
+        personalScoreText.text = $"{personalScore.ToString()} / " + inventorySize;
+        groupScoreText.text = groupScore.ToString();
+
     }
 
     void FixedUpdate()
@@ -164,6 +183,16 @@ public class inventory : MonoBehaviour
         {
             gameObject.transform.localScale = new Vector3(-0.15f,0.15f,0.7f);
         }
+
+        view.RPC("Start", RpcTarget.AllBufferedViaServer);
+        view.RPC("Collect", RpcTarget.AllBufferedViaServer);
+        view.RPC("OnTriggerStay2D", RpcTarget.AllBufferedViaServer);
+        view.RPC("UpdateTextBox", RpcTarget.AllBufferedViaServer);
+        view.RPC("UpdateGUI", RpcTarget.AllBufferedViaServer);
+        view.RPC("reset", RpcTarget.AllBufferedViaServer);
+            
+
+
         UpdateGUI();
         UpdateTextBox();
     }

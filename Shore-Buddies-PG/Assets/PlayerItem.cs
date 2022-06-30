@@ -21,6 +21,10 @@ public class PlayerItem : MonoBehaviourPunCallbacks
 
     Player player;
 
+    public void Start()
+    {
+        PhotonNetwork.SetPlayerCustomProperties(playerProperties);
+    }
     private void Awake()
     {
         backgroundImage = GetComponent<Image>();

@@ -121,7 +121,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7847128151854055197}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7458033995150314022}
+        m_TargetAssemblyTypeName: PlayerItem, Assembly-CSharp
+        m_MethodName: OnClickRigthArrow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2163573765499803339
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +159,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2163573765499803339}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.010084873, y: 0.012419973, z: 0.010084873}
   m_ConstrainProportionsScale: 0
@@ -205,15 +217,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 18, y: 18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7458033995150314022
@@ -232,12 +244,13 @@ MonoBehaviour:
   highlightColor: {r: 0.512994, g: 0.8301887, b: 0.74997586, a: 0}
   leftArrowButton: {fileID: 3678021901251428216}
   rightArrowButton: {fileID: 627466457983681156}
-  playerAvatar: {fileID: 0}
+  playerAvatar: {fileID: 7052639053760320480}
   avatars:
-  - {fileID: 21300000, guid: eae148fa270824f6ca5b13546932fa12, type: 3}
-  - {fileID: 21300000, guid: 0ebc3b2228736463493c1d4290465c3b, type: 3}
+  - {fileID: 21300000, guid: 6bb3c347d1e014aa6a9ca17dc7442e2f, type: 3}
   - {fileID: 21300000, guid: f897e1201f6c64dfd947be08d92b25e5, type: 3}
+  - {fileID: 21300000, guid: eae148fa270824f6ca5b13546932fa12, type: 3}
   - {fileID: 21300000, guid: 09ff2d781c737496d954ed74b37035a4, type: 3}
+  - {fileID: 21300000, guid: 0ebc3b2228736463493c1d4290465c3b, type: 3}
 --- !u!1 &3543982610774054010
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +448,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1434538351824155693}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7458033995150314022}
+        m_TargetAssemblyTypeName: PlayerItem, Assembly-CSharp
+        m_MethodName: OnClickLeftArrow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5348841944676330086
 GameObject:
   m_ObjectHideFlags: 0
