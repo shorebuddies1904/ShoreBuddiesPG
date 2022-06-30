@@ -84,6 +84,7 @@ public class SammyMovement : MonoBehaviour
         if(other.CompareTag("BeachBounds")) {
             moveSpeed += 3;
             Debug.Log("Enter!");
+            Debug.Log("Test!");
         }
 
     }
