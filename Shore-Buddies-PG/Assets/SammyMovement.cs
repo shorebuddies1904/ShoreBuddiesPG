@@ -88,6 +88,7 @@ public class SammyMovement : MonoBehaviour
 
     }
 
+<<<<<<< Updated upstream
     private void OnTriggerExit2D(Collider2D other)
     {
         if(other.CompareTag("BeachBounds")) {
@@ -95,4 +96,22 @@ public class SammyMovement : MonoBehaviour
         Debug.Log("exit!");
         }
     }
+=======
+    private void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.name == "SammyTheSeal") {
+            moveSpeed += 3;
+            Debug.Log("Enter!");
+        }
+
+    }
+
+    // private void OnTriggerExit2D(Collider2D other)
+    // {
+    //     if(other.CompareTag("BeachBounds")) {
+    //     moveSpeed = 5;
+    //     Debug.Log("exit!");
+    //     }
+    // }
+>>>>>>> Stashed changes
 }
