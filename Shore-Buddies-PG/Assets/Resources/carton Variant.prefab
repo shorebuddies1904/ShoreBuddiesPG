@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &347808460319189696
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -2625376064035429606, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_Size.x
+      value: 3.8694186
+      objectReference: {fileID: 0}
+    - target: {fileID: -2625376064035429606, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_Size.y
+      value: 6.769351
+      objectReference: {fileID: 0}
+    - target: {fileID: -2625376064035429606, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.63270974
+      objectReference: {fileID: 0}
+    - target: {fileID: -2625376064035429606, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.13181639
+      objectReference: {fileID: 0}
+    - target: {fileID: 818647065650025480, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 818647065650025480, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.167
+      objectReference: {fileID: 0}
+    - target: {fileID: 818647065650025480, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 818647065650025480, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 818647065650025480, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 818647065650025480, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 818647065650025480, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 818647065650025480, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 818647065650025480, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 818647065650025480, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 818647065650025480, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304142547579710878, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+      propertyPath: m_Name
+      value: carton Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+--- !u!1 &7029607750224922462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7304142547579710878, guid: dad27df3fb752ac418b134f75d0877d2, type: 3}
+  m_PrefabInstance: {fileID: 347808460319189696}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4398403922770962543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7029607750224922462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
